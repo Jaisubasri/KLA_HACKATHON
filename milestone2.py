@@ -38,10 +38,10 @@ def calculate_co_ordinates(dia, wid, heigh, die_vector, ref):
         val1=0
     x_llc, y_llc = val0, val1
     index, answer = [], []
-    dfs(0, 0, heigh, wid, dia, -19, -32, index, answer)
+    dfs(0, 0, heigh, wid, dia, x_llc, y_llc, index, answer)
     return index, answer
 
-f = open("Milestone2\Input\Testcase3.txt", "r")
+f = open("Milestone2\Input\Testcase1.txt", "r")
 input_values = []  # whole input
 values = []        # values
 spl_word = ':'
@@ -65,7 +65,7 @@ for die_index, llc in zip(result0, result1):
     print(f"{die_index}:{llc}")
 """
 
-file = open('milestone2_testcase3.txt', 'w')
+file = open('milestone2_testcase1.txt', 'w')
 for die_index, llc in zip(result0, result1):
     file.write(f"{die_index}:{llc}\n")
 file.close()
